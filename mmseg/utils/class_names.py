@@ -1,6 +1,14 @@
 # Copyright (c) OpenMMLab. All rights reserved.
 from mmengine.utils import is_str
 
+def customCOCO_classes():
+    return[
+        'person', 'ground-other'
+    ]
+def customCOCO_palette():
+    return [
+        [0, 192, 64], [0, 0, 0]
+    ]
 
 def cityscapes_classes():
     """Cityscapes class names for external use."""
@@ -499,7 +507,7 @@ dataset_aliases = {
     'cocostuff': [
         'cocostuff', 'cocostuff10k', 'cocostuff164k', 'coco-stuff',
         'coco-stuff10k', 'coco-stuff164k', 'coco_stuff', 'coco_stuff10k',
-        'coco_stuff164k'
+        'coco_stuff164k', 'customCOCO_dataset'
     ],
     'isaid': ['isaid', 'iSAID'],
     'stare': ['stare', 'STARE'],
